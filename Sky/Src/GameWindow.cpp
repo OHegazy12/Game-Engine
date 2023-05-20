@@ -21,7 +21,7 @@ namespace Sky
 	}
 	void GameWindow::createWindow(int width, int height, std::string&& windowName)
 	{
-		mInstance -> mImplementation->createWindow(width, height, windowName);
+		mInstance -> mImplementation->createWindow(width, height, std::move(windowName));
 	}
 	void GameWindow::SwapBuffers()
 	{

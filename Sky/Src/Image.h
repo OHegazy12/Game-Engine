@@ -18,10 +18,7 @@ namespace Sky
 		int GetHeight() const;
 
 	private:
-		ImplImage* mImplementation{ nullptr };
-
-
-
+		std::unique_ptr<ImplImage> mImplementation;
 	};
 
 

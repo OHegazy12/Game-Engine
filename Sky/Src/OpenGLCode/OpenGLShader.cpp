@@ -150,11 +150,13 @@ namespace Sky
 	}
 	void OpenGLShader::Pass2FloatValues(const std::string& name, float val1, float val2)
 	{
+		glUseProgram(mProgram);
 		GLint location{ glGetUniformLocation(mProgram, name.c_str()) };
 		glUniform2f(location, val1, val2);
 	}
 	void OpenGLShader::Pass2FloatValues(std::string&& name, float val1, float val2)
 	{
+		glUseProgram(mProgram);
 		GLint location{ glGetUniformLocation(mProgram, name.c_str()) };
 		glUniform2f(location, val1, val2);
 	}

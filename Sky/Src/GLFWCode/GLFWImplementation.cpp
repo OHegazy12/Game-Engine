@@ -33,10 +33,14 @@ namespace Sky
 	}
 	int GLFWImplementation::getWidth() const
 	{
-		return 0;
+		int height{ 0 }, width{ 0 };
+		glfwGetWindowSize(mWindow, &width, &height);
+		return width;
 	}
 	int GLFWImplementation::getHeight() const
 	{
-		return 0;
+		int height{ 0 }, width{ 0 };
+		glfwGetWindowSize(mWindow, &width, &height);
+		return height;
 	}
 }

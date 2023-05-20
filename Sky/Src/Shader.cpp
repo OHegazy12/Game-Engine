@@ -4,9 +4,6 @@
 
 namespace Sky
 {
-
-
-
 	Shader::Shader(const std::string& vertexFile, const std::string& fragmentFile)
 	{
 #ifdef SKY_OPENGL
@@ -20,7 +17,7 @@ namespace Sky
 	Shader::Shader(const std::string&& vertexFile, const std::string&& fragmentFile)
 	{
 #ifdef SKY_OPENGL
-		mImplementation = std::unique_ptr<ImplShader>{ new OpenGLShader{vertexFile, fragmentFile} };
+		mImplementation = std::unique_ptr<ImplShader>{ new OpenGLShader{std::move(vertexFile), std::move(fragmentFile)} };
 
 #else
 		#Only_OpenGL_is_implemented_at_the_moment
