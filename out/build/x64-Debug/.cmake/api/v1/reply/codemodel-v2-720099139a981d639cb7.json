@@ -1,0 +1,101 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Sky",
+					"jsonFile" : "directory-Sky-Debug-b4e11172d6942483bf9b.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "Sky",
+					"targetIndexes" : 
+					[
+						1
+					]
+				},
+				{
+					"build" : "S23_Game",
+					"jsonFile" : "directory-S23_Game-Debug-145defd4d264883729a0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "S23_Game",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "Spring23",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "S23_Game::@f23eff3b286f851e82ad",
+					"jsonFile" : "target-S23_Game-Debug-c7f371416503f75edf4a.json",
+					"name" : "S23_Game",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "Sky::@b668db068b5c66d73a08",
+					"jsonFile" : "target-Sky-Debug-72b4d4d3d8a1fcbf9899.json",
+					"name" : "Sky",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug",
+		"source" : "C:/Users/omarh/Desktop/S23_Game"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

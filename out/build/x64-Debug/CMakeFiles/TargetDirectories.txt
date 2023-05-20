@@ -1,0 +1,8 @@
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/Sky/CMakeFiles/Sky.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/Sky/CMakeFiles/edit_cache.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/Sky/CMakeFiles/rebuild_cache.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/S23_Game/CMakeFiles/S23_Game.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/S23_Game/CMakeFiles/edit_cache.dir
+C:/Users/omarh/Desktop/S23_Game/out/build/x64-Debug/S23_Game/CMakeFiles/rebuild_cache.dir
