@@ -12,9 +12,6 @@
 
 namespace Sky
 {
-
-
-
 	void SkyApp::Run()
 	{
 		Renderer renderer;

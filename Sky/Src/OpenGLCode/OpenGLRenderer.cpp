@@ -27,7 +27,7 @@ namespace Sky
 
 		glBindVertexArray(mVAO);
 
-		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mVBO);
+		glBindBuffer(GL_ARRAY_BUFFER, mVBO);
 
 		glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, mEBO);
 		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(edata), edata, GL_STATIC_DRAW);
@@ -49,8 +49,9 @@ namespace Sky
 		};
 
 		glBindVertexArray(mVAO);
-		glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(vdata), vdata, GL_STATIC_DRAW);
+		glBufferData(GL_ARRAY_BUFFER, sizeof(vdata), vdata, GL_STATIC_DRAW);
 
+		image.Activate();
 		shader.Activate();
 		glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
 	}
