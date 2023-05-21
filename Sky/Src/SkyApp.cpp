@@ -23,6 +23,8 @@ namespace Sky
 		"../Assets/Shaders/DefaultFragmentShader.glsl" };
 
 		sProgram.Pass2FloatValues("screenSize", GameWindow::getWidth(), GameWindow::getHeight());
+
+		mNextFrameTime = std::chrono::steady_clock::now();
 		 
 		while (true)
 		{
@@ -31,6 +33,13 @@ namespace Sky
 			renderer.Draw(pic, { 200, 100 });
 
 			OnUpdate();
+
+			std::this_thread::sleep_until(mNextFrameTime);
+
+			Sky::GameWindow::SwapBuffers();
+			Sky::GameWindow::PollEvents();
+
+			mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
 		}
 
 

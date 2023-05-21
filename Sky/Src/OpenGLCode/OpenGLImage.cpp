@@ -6,14 +6,6 @@
 
 Sky::OpenGLImage::OpenGLImage(const std::string& imageFile)
 {
-	/*std::ifstream image("../Assets/Images/test.png");
-	std::string line;
-	while (image)
-	{
-		std::getline(image, line);
-	}
-	image.close();*/
-
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 
@@ -34,21 +26,10 @@ Sky::OpenGLImage::OpenGLImage(const std::string& imageFile)
 	glGenerateMipmap(GL_TEXTURE_2D);
 
 	stbi_image_free(data);
-	//glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 Sky::OpenGLImage::OpenGLImage(std::string&& imageFile)
 {
-	/*std::ifstream image{imageFile};
-	std::string line;
-
-	while (image)
-	{
-		std::getline(image, line);
-	}
-
-	image.close();*/
-
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 

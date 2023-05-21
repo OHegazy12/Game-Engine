@@ -1,6 +1,10 @@
 #pragma once
 
+#include "pch.h"
 #include "SkyUtility.h"
+
+
+constexpr int FPS{ 60 };
 
 namespace Sky
 {
@@ -13,8 +17,8 @@ namespace Sky
 		void Run();
 
 	private:
-
-
+		std::chrono::milliseconds mFrameDuration{ std::chrono::milliseconds{1000} / FPS };
+		std::chrono::steady_clock::time_point mNextFrameTime;
 
 	};
 }
