@@ -6,23 +6,24 @@
 
 Sky::OpenGLImage::OpenGLImage(const std::string& imageFile)
 {
-	std::ifstream image("../Assets/Images/test.png");
+	/*std::ifstream image("../Assets/Images/test.png");
 	std::string line;
 	while (image)
 	{
 		std::getline(image, line);
 	}
-	image.close();
+	image.close();*/
 
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	stbi_set_flip_vertically_on_load(true);
-	unsigned char* data = stbi_load("../Assets/Images/test.png", &width, &height, &nrChannels, 3);
+	unsigned char* data = stbi_load(imageFile.c_str(), &width, &height, &nrChannels, 0);
 
 	if (data == nullptr)
 	{
@@ -33,12 +34,12 @@ Sky::OpenGLImage::OpenGLImage(const std::string& imageFile)
 	glGenerateMipmap(GL_TEXTURE_2D);
 
 	stbi_image_free(data);
-	glBindTexture(GL_TEXTURE_2D, 0);
+	//glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 Sky::OpenGLImage::OpenGLImage(std::string&& imageFile)
 {
-	std::ifstream image{ imageFile };
+	/*std::ifstream image{imageFile};
 	std::string line;
 
 	while (image)
@@ -46,17 +47,18 @@ Sky::OpenGLImage::OpenGLImage(std::string&& imageFile)
 		std::getline(image, line);
 	}
 
-	image.close();
+	image.close();*/
 
 	glGenTextures(1, &texture1);
 	glBindTexture(GL_TEXTURE_2D, texture1);
 
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	stbi_set_flip_vertically_on_load(true);
-	unsigned char* data = stbi_load("../Assets/Images/test.png", &width, &height, &nrChannels, 3);
+	unsigned char* data = stbi_load("../Assets/Images/test.png", &width, &height, &nrChannels, 0);
 
 	if (data == nullptr)
 	{

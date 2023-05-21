@@ -8,7 +8,7 @@ namespace Sky
 	
 #ifdef SKY_OPENGL
 	Renderer::Renderer() : mImplementation(std::unique_ptr<ImplRenderer>{new OpenGLRenderer}),
-		mDefaultShader{ "../Assets/Shaders/DefaultVertextShader.glsl",
+		mDefaultShader{ "../Assets/Shaders/DefaultVertexShader.glsl",
 		"../Assets/Shaders/DefaultFragmentShader.glsl" } {}
 #else
 		#Only_OpenGL_is_implemented_at_the_moment

@@ -29,12 +29,12 @@ namespace Sky
 
 	int Image::GetWidth() const
 	{
-		return 0;
+		return mImplementation->GetWidth();
 	}
 
 	int Image::GetHeight() const
 	{
-		return 0;
+		return mImplementation->GetHeight();
 	}
 
 
