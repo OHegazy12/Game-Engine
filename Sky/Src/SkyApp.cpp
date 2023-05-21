@@ -20,7 +20,7 @@ namespace Sky
 		Renderer renderer;
 
 		Image pic{ "../Assets/Images/test.png" };
-		//pic.Activate();
+		pic.Activate();
 
 		Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl",
 		"../Assets/Shaders/DefaultFragmentShader.glsl" };
