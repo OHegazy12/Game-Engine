@@ -27,5 +27,5 @@ namespace Sky
 		friend  SKY_API bool UnitsOverlap(const Unit& a, const Unit& b);
 	};
 
-	bool SKY_API UnitsOverlap(const Unit& a, const Unit& b);
+	SKY_API bool UnitsOverlap(const Unit& a, const Unit& b);
 }

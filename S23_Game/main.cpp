@@ -8,9 +8,6 @@ public:
 
 	S23_Game_App()
 	{
-		//Sky::GameWindow::Init();
-		//Sky::GameWindow::createWindow(800, 600, "Test Name");
-
 		SetKeyPressedCallback([this](const Sky::KeyPressed& e) {MyKeyPressedFunc(e); });
 	}
 

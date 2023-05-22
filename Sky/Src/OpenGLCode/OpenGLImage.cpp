@@ -1,7 +1,7 @@
 #include "pch.h"
 #include "OpenGLImage.h"
 #include "glad/glad.h"
-#include "std_image.h"
+#include "stb_image.h"
 #include "Shader.h"
 
 Sky::OpenGLImage::OpenGLImage(const std::string& imageFile)

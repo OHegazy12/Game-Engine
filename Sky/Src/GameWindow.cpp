@@ -51,6 +51,7 @@ namespace Sky
 
 	void GameWindow::SetWindowCloseCallback(std::function<void()> callbackFunc)
 	{
+		mImplementation->SetWindowCloseCallback(callbackFunc);
 	}
 
 	GameWindow::~GameWindow()

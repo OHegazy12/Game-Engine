@@ -85,6 +85,6 @@ namespace Sky
 
 	GLFWImplementation::~GLFWImplementation()
 	{
-		glfwTerminate();
+		
 	}
 }
