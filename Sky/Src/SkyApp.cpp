@@ -12,21 +12,42 @@
 
 namespace Sky
 {
+	SkyApp::SkyApp()
+	{
+		GameWindow::Init();
+		GameWindow::createWindow(800, 600, "Test Name");
+
+		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
+		//std::bind(&SkyApp::DefaultWindowCloseHandler, this)
+	}
+
 	void SkyApp::Run()
 	{
-		Renderer renderer;
+		//Renderer renderer;
 
-		Image pic{ "../Assets/Images/test.png" };
-		pic.Activate();
+		//Image pic{ "../Assets/Images/test.png" };
+		//pic.Activate();
 
-		Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl",
-		"../Assets/Shaders/DefaultFragmentShader.glsl" };
+		//Shader sProgram{ "../Assets/Shaders/DefaultVertexShader.glsl",
+		//"../Assets/Shaders/DefaultFragmentShader.glsl" };
 
-		sProgram.Pass2FloatValues("screenSize", GameWindow::getWidth(), GameWindow::getHeight());
+		//sProgram.Pass2FloatValues("screenSize", GameWindow::getWidth(), GameWindow::getHeight());
 
 		mNextFrameTime = std::chrono::steady_clock::now();
+
+		while (!mGameWindowShouldClose)
+		{
+			OnUpdate();
+
+			std::this_thread::sleep_until(mNextFrameTime);
+
+			Sky::GameWindow::SwapBuffers();
+			Sky::GameWindow::PollEvents();
+
+			mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
+		}
 		 
-		while (true)
+		/*while (true)
 		{
 			renderer.Clear();
 
@@ -40,9 +61,29 @@ namespace Sky
 			Sky::GameWindow::PollEvents();
 
 			mNextFrameTime = std::chrono::steady_clock::now() + mFrameDuration;
-		}
+		}*/
 
 
+	}
+
+	void SkyApp::SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc)
+	{
+		 GameWindow::getGameWindow()->SetKeyPressedCallback(callbackFunc);
+	}
+
+	void SkyApp::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
+	{
+		GameWindow::getGameWindow()->SetKeyReleasedCallback(callbackFunc);
+	}
+
+	void SkyApp::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+		GameWindow::getGameWindow()->SetWindowCloseCallback(callbackFunc);
+	}
+
+	void SkyApp::DefaultWindowCloseHandler()
+	{
+		mGameWindowShouldClose = true;
 	}
 
 

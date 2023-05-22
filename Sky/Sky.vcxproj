@@ -32,10 +32,12 @@
     <ClCompile Include="src\Renderer.cpp" />
     <ClCompile Include="src\Shader.cpp" />
     <ClCompile Include="Src\SkyApp.cpp" />
+    <ClCompile Include="src\Unit.cpp" />
     <ClCompile Include="Src\WindowImplementation.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\Sky.h" />
+    <ClInclude Include="src\SkyKeys.h" />
     <ClInclude Include="src\GameWindow.h" />
     <ClInclude Include="Src\GLFWCode\GLFWImplementation.h" />
     <ClInclude Include="src\Image.h" />
@@ -50,7 +52,9 @@
     <ClInclude Include="Src\RendererTypes.h" />
     <ClInclude Include="src\Shader.h" />
     <ClInclude Include="Src\SkyApp.h" />
+    <ClInclude Include="src\SkyEvents.h" />
     <ClInclude Include="Src\SkyUtility.h" />
+    <ClInclude Include="src\Unit.h" />
     <ClInclude Include="Src\WindowImplementation.h" />
   </ItemGroup>
   <ItemGroup>

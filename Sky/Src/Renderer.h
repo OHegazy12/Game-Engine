@@ -6,6 +6,7 @@
 #include "Shader.h"
 #include "ImplRenderer.h"
 #include "RendererTypes.h"
+#include "Unit.h"
 
 namespace Sky
 {
@@ -19,6 +20,9 @@ namespace Sky
 
 		void Draw(Image& image, TextureBox texCoords, Shader& shader, ScreenCoord coords);
 		void Draw(Image& image, TextureBox texCoords, ScreenCoord coords);
+
+		void Draw(Unit& unit, Shader& shader);
+		void Draw(Unit& unit);
 
 		void Clear();
 

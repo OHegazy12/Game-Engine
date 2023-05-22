@@ -18,7 +18,21 @@ namespace Sky
 		virtual int getWidth() const override;
 		virtual int getHeight() const override;
 
+		virtual void SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc) override;
+		virtual void SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc) override;
+
+		virtual void SetWindowCloseCallback(std::function<void()> callbackFunc) override;
+
+		virtual ~GLFWImplementation();
+
 	private:
+
+		struct Callbacks
+		{
+			std::function<void(const KeyPressed&)> keyPressedFunc{ [](const KeyPressed&) {} };
+			std::function<void(const KeyReleased&)> keyReleasedFunc{ [] (const KeyReleased&) {} };
+			std::function<void()> windowCloseFunc{ []() {} };
+		} mCallbacks;
 
 		GLFWwindow* mWindow{ nullptr };
 	};

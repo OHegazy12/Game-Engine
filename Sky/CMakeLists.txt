@@ -14,6 +14,9 @@ set(HEADER_FILES
 	Src/Image.h
 	Src/ImplImage.h
 	Src/OpenGLCode/OpenGLImage.h
+	Src/Unit.h
+	Src/SkyEvents.h
+	Src/SkyKeys.h
 )
 
 set(SOURCE_FILES
@@ -26,6 +29,8 @@ set(SOURCE_FILES
 	Src/OpenGLCode/OpenGLRenderer.cpp
 	Src/Image.cpp
 	Src/OpenGLCode/OpenGLShader.cpp
+	Src/Unit.Cpp
+	Src/SkyEvents.cpp
 )
 
 add_library(Sky SHARED ${HEADER_FILES} ${SOURCE_FILES})

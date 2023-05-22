@@ -39,6 +39,20 @@ namespace Sky
 	{
 		return mInstance -> mImplementation -> getHeight();
 	}
+	void GameWindow::SetKeyPressedCallback(std::function<void(const KeyPressed&)> callbackFunc)
+	{
+		mImplementation->SetKeyPressedCallback(callbackFunc);
+	}
+
+	void GameWindow::SetKeyReleasedCallback(std::function<void(const KeyReleased&)> callbackFunc)
+	{
+		mImplementation->SetKeyReleasedCallback(callbackFunc);
+	}
+
+	void GameWindow::SetWindowCloseCallback(std::function<void()> callbackFunc)
+	{
+	}
+
 	GameWindow::~GameWindow()
 	{
 		if (mImplementation != nullptr)
@@ -46,6 +60,7 @@ namespace Sky
 			delete mImplementation;
 		}
 	}
+
 	GameWindow::GameWindow()
 	{
 #ifdef SKY_GLFW
