@@ -3,7 +3,7 @@
 
 namespace Sky
 {
-	KeyPressed::KeyPressed(int kCode) : mKeyCode(kCode)
+	KeyPressed::KeyPressed(int kCode): mKeyCode(kCode)
 	{
 		
 	}
@@ -13,7 +13,7 @@ namespace Sky
 		return mKeyCode;
 	}
 
-	KeyReleased::KeyReleased(int kCode) : mKeyCode(kCode)
+	KeyReleased::KeyReleased(int kCode): mKeyCode(kCode)
 	{
 
 	}

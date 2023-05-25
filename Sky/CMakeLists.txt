@@ -29,7 +29,8 @@ set(SOURCE_FILES
 	Src/OpenGLCode/OpenGLRenderer.cpp
 	Src/Image.cpp
 	Src/OpenGLCode/OpenGLShader.cpp
-	Src/Unit.Cpp
+	Src/OpenGLCode/OpenGLImage.cpp
+	Src/Unit.cpp
 	Src/SkyEvents.cpp
 )
 
