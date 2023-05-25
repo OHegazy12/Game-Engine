@@ -16,6 +16,7 @@ public:
 		renderer.Clear();
 		renderer.Draw(back, { 0,0 });
 		renderer.Draw(unit);
+		renderer.Draw(enemy);
 	}
 
 	void MyKeyPressedFunc(const Sky::KeyPressed& e)
@@ -34,6 +35,7 @@ private:
 	Sky::Renderer renderer;
 
 	Sky::Unit unit{ "../Assets/Images/test.png", {100, 100} };
+	Sky::Unit enemy{ "../Assets/Images/enemy.png", {500, 100} };
 	Sky::Image back{ "../Assets/Images/back.png" };
 };
 
