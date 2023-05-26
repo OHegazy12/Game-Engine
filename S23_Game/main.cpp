@@ -19,6 +19,8 @@ public:
 		renderer.Draw(slime);
 		renderer.Draw(slime2);
 		renderer.Draw(slime3);
+		renderer.Draw(slime4);
+		renderer.Draw(portal);
 
 		if (Sky::UnitsOverlap(unit, slime))
 		{
@@ -35,9 +37,15 @@ public:
 			slime3.SetCoords({ 1000, 1000 });
 		}
 
-		if (Sky::UnitsOverlap(unit, slime) && Sky::UnitsOverlap(unit, slime2) && Sky::UnitsOverlap(unit, slime3))
+		if (Sky::UnitsOverlap(unit, slime4))
 		{
+			slime4.SetCoords({ 1000, 1000 });
+		}
 
+		if (Sky::UnitsOverlap(unit, portal))
+		{
+			renderer.Clear();
+			renderer.Draw(goodjob, { 400,0 });
 		}
 	}
 
@@ -59,6 +67,12 @@ public:
 		{
 			unit.UpdateXCoord(20);
 		}
+
+		if (e.GetKeyCode() == Sky_KEY_SPACE)
+		{
+			renderer.Draw(slime4);
+			slime.SetCoords({ 600, 100 });
+		}
 	}
 
 private:
@@ -66,8 +80,11 @@ private:
 
 	Sky::Unit unit{ "../Assets/Images/test.png", {100, 100} };
 	Sky::Unit slime{ "../Assets/Images/slime.png", {300, 100} };
-	Sky::Unit slime2{ "../Assets/Images/slime2.png", {500, 100} };
-	Sky::Unit slime3{ "../Assets/Images/slime3.png", {700, 100} };
+	Sky::Unit slime2{ "../Assets/Images/slime2.png", {600, 100} };
+	Sky::Unit slime3{ "../Assets/Images/slime3.png", {800, 100} };
+	Sky::Unit slime4{ "../Assets/Images/slime4.png", {975, 100} };
+	Sky::Unit portal{ "../Assets/Images/portal.png", {1100,100} };
+	Sky::Image goodjob{ "../Assets/Images/goodjob.png" };
 	Sky::Image back{ "../Assets/Images/back.png" };
 };
 
