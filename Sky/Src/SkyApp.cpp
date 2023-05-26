@@ -15,7 +15,7 @@ namespace Sky
 	SkyApp::SkyApp()
 	{
 		GameWindow::Init();
-		GameWindow::createWindow(800, 600, "Test Name");
+		GameWindow::createWindow(1280, 700, "Sky Game");
 
 		SetWindowCloseCallback([this]() {DefaultWindowCloseHandler(); });
 	}
