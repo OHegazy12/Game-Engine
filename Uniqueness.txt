@@ -1,0 +1,6 @@
+This is a simple item collecting level. You are a robot on a planet on the far ends of the universe, and you are hunting for Energon, the life force of your people.
+In this simple level, you can move the robot left or right using either the left/right arrow keys or the "A" and "D" keys. Each time you press on the space button,
+the level spawns more Energon for you to pick up. When you feel you are done, go to the portal to exit the level. 
+
+The uniqueness of this game comes from being able to spawn an item at your disposal, picking up items, and having a nice message pop up once you go to the portal to exit 
+the level. Enjoy!
